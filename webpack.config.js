@@ -3,6 +3,7 @@ const path = require('path')
 
 
 const htmlPlugin = require('html-webpack-plugin')
+const extractTextPlugin = require('extract-text-webpack-plugin')
 
 
 module.exports = {
@@ -36,13 +37,13 @@ module.exports = {
                         loader: 'style-loader'
                     },
                     {
-                        loader: 'css-loader'
-                    },
-                    {
-                        loader: 'less-loader'
+                        loader: 'css-loader',
                     },
                     {
                         loader: 'postcss-loader'
+                    },
+                    {
+                        loader: 'less-loader',
                     }
                 ]
             }
@@ -50,6 +51,7 @@ module.exports = {
     },
     plugins: [
         new webpack.BannerPlugin('less哥来了'),
+        new extractTextPlugin("css/index.css"),
         new htmlPlugin({
             minify: {
                 removeAttributeQuotes: true
@@ -63,5 +65,5 @@ module.exports = {
         host: '192.168.1.43',
         compress: true,
         port: 2333
-    }
+    },
 }

@@ -1,6 +1,31 @@
-#less {
-    width: 50px;
-    height: 50px;
-    background-color: green;
+
+@demo_div: 300px;
+
+.shadow() {
     box-shadow: 1px 1px 0 red;
+}
+.less {
+    width: @demo_div;
+    height: @demo_div;
+    box-shadow: 1px 1px 0 red;
+}
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+.less {
+    color: @light-blue;
+    .bordered;
+    .border(5px);
+    .border2;
+}
+.bordered() {
+    border-top: dotted 1px black;
+    border-bottom: solid 2px black;
+}
+
+.border(@border_width) {
+    border-right: @border_width solid green;
+}
+.border2(@border_width:10px) {
+    border-left: @border_width solid yellow;
 }
