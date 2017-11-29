@@ -22,7 +22,27 @@ module.exports = {
                         loader: 'style-loader'
                     },
                     {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'postcss-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
                         loader: 'css-loader'
+                    },
+                    {
+                        loader: 'less-loader'
+                    },
+                    {
+                        loader: 'postcss-loader'
                     }
                 ]
             }
@@ -42,6 +62,6 @@ module.exports = {
         contentBase: path.resolve(__dirname, 'dist'),
         host: '192.168.1.43',
         compress: true,
-        port: 6666
+        port: 2333
     }
 }
