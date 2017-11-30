@@ -7,3 +7,32 @@
     border-color: red black green yellow;
     border-style: solid dashed dashed dashed;
 }
+.change(top, @w:5px, @c:red) {
+    border-width: @w;
+    border-color: @c transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+}
+.change(right, @w:5px, @c:red) {
+    border-width: @w;
+    border-color: transparent @c transparent transparent;
+    border-style: dashed solid dashed dashed;
+}
+.change(bottom, @w:5px, @c:red) {
+    border-width: @w;
+    border-color: transparent transparent @c transparent;
+    border-style: dashed dashed solid dashed;
+}
+.change(left, @w:5px, @c:red) {
+    border-width: @w;
+    border-color: transparent transparent transparent @c;
+    border-style: dashed dashed dashed solid;
+}
+.change(@_, @w:5px, @c:red) {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    margin-top: 100px
+}
+.sanjiao {
+    .change(top, 10px, green)
+}

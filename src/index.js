@@ -1,5 +1,6 @@
 import css from './css/index.less'
 import css2 from './css/pipei.less'
+import css3 from './css/qiantao.less'
 
 // 注意postcss-loader 要放在less-loader之前
 
