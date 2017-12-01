@@ -12,6 +12,18 @@
         }
     }
     span:hover {
+        width: ~'calc(300px-30px)';
         color: red;
     }
+    .border_arg(5px);
+}
+
+.border_arg(@w:30px,@c:red,@x:solid) {
+    border: @arguments;
+}
+
+.border_nor(@w:30px,@c:red,@x:solid) {
+    border-width: @w;
+    border-color: @c;
+    border-style: @x;
 }

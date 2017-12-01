@@ -17,3 +17,23 @@ import css3 from './css/qiantao.less'
 //      border-color: red transparent transparent transparent;
 //      border-style: solid dashed dashed dashed;
 // }
+
+
+// li {
+//     font-size: 14px;
+//     &:hover {
+//         text-align: center;
+//     }
+// }
+// & 代表上一级选择器  即li:hover
+
+
+// @arguments 代表所有参数
+// .border_arg(@w:30px,@c:red,@x:solid) {
+//     border: @arguments;
+// }
+// .border_nor(@w:30px,@c:red,@x:solid) {
+//     border-width: @w;
+//     border-color: @c;
+//     border-style: @x;
+// }
